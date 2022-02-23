@@ -99,7 +99,13 @@ def sensors():
 
 # YOUR FLASK CODE------------------------------------------------------------------------
 
+@app.route('/sensorview', methods=['GET','POST'])
+def sensorview():
+    return render_template("sensorview.html")
 
+@app.route('/mission', methods=['GET','POST'])
+def mission():
+    return render_template("mission.html")
 
 
 

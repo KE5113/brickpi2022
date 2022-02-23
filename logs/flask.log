@@ -1,0 +1,29 @@
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:18:34] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:18:34] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:18:34] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:18:34] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:18:34] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:18:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:[{'email': 'admin@admin', 'userid': 1, 'password': 'admin', 'name': 'admin', 'permission': 'admin'}]
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:19:30] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:19:30] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:19:31] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:19:31] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:20:03] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:20:03] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: SHUTDOWN EVERYTHING
+INFO:flask_app:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:flask_app:Exiting
+INFO:root:CAMERA INTERFACE: Exiting Camera Thread
+INFO:werkzeug:10.10.41.79 - - [23/Feb/2022 12:20:52] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
