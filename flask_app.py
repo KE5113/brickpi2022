@@ -99,7 +99,26 @@ def sensors():
 
 # YOUR FLASK CODE------------------------------------------------------------------------
 
+@app.route('/shoot', methods=['GET','POST'])
+def shoot():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.spin_medium_motor(2000)
+    return jsonify(data)
 
+@app.route('/moveforward', methods=['GET','POST'])
+def moveforward():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.move_power_time(30, 3)
+    return jsonify(data)
+
+'''@app.route('/stop', methods=['GET','POST'])
+def stop():
+    data = {}
+    if GLOBALS.ROBOT:
+        #GLOBALS.ROBOT.spin_medium_motor(2000)
+    return jsonify(data)'''
 
 
 

@@ -1,0 +1,27 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.41.79:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 235-704-380
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:06] "GET /static/css/custom.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:06] "GET /static/css/theme.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:06] "GET /static/js/new_ajax_helper.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:06] "GET /static/js/custom.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:[{'userid': 1, 'name': 'admin', 'email': 'admin@admin', 'password': 'admin', 'permission': 'admin'}]
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "GET /static/js/mapping.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:11] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:flask_app:LOADING CAMERA
+INFO:flask_app:FLASK APP: CAMERA NOT WORKING
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:21] "[35m[1mPOST /robotload HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/kieraneades/Documents/GitHub/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat

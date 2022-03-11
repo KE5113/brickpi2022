@@ -3,10 +3,13 @@
 import time
 import io
 import threading
-import picamera
-import picamera.array
-import cv2
-import numpy
+try:
+    import picamera
+    import picamera.array
+    import cv2
+    import numpy
+except Exception as E:
+    print("This doesn't work and I don't care Mr Man")
 import logging
 
 class CameraInterface(object):
