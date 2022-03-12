@@ -152,7 +152,20 @@ def turnright():
         GLOBALS.ROBOT.rotate_power_degrees_IMU(30, 90)
     return jsonify(data)
 
+@app.route('/mission', methods=['GET','POST']) # allows the current mission to be updated, and previous missions viewed
+def misson():
+    data = None
+    # if method is 
+        # get form data
+        # insert this data into the mission entry
+        # select the entry id and save it into the session
+    return render_template('mission.html', data=data)
 
+@app.route('/sensorview', methods=['GET','POST']) # allows the sensor outputs to be viewed
+def sensorview():
+    data = None
+
+    return render_template('sensorsview.html', data=data)
 
 
 
