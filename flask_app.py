@@ -102,8 +102,19 @@ def sensors():
 @app.route('/shoot', methods=['GET','POST'])
 def shoot():
     data = {}
+    if GLOBALS.SOUND:
+        GLOBALS.SOUND.say("Prepare to die")
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.spin_medium_motor(2000)
+        GLOBALS.ROBOT.spin_medium_motor(360)
+    return jsonify(data)
+
+@app.route('/reloadpackage', methods=['GET','POST'])
+def reloadpackage():
+    data = {}
+    if GLOBALS.SOUND:
+        GLOBALS.SOUND.say("Loading new package")
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.spin_medium_motor(-360)
     return jsonify(data)
 
 @app.route('/moveforward', methods=['GET','POST'])
@@ -113,12 +124,33 @@ def moveforward():
         GLOBALS.ROBOT.move_power_time(30, 3)
     return jsonify(data)
 
-'''@app.route('/stop', methods=['GET','POST'])
+@app.route('/movebackward', methods=['GET','POST'])
+def movebackward():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.move_power_time(-30, 3)
+    return jsonify(data)
+
+@app.route('/stop', methods=['GET','POST'])
 def stop():
     data = {}
     if GLOBALS.ROBOT:
-        #GLOBALS.ROBOT.spin_medium_motor(2000)
-    return jsonify(data)'''
+        GLOBALS.ROBOT.stop_all()
+    return jsonify(data)
+
+@app.route('/turnleft', methods=['GET','POST'])
+def turnleft():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.rotate_power_degrees_IMU(30, -90)
+    return jsonify(data)
+
+@app.route('/turnright', methods=['GET','POST'])
+def turnright():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.rotate_power_degrees_IMU(30, 90)
+    return jsonify(data)
 
 
 
