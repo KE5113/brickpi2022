@@ -3,6 +3,7 @@ from interfaces import databaseinterface, camerainterface, soundinterface
 import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import logging, time
+from datetime import *
 
 #Creates the Flask Server Object
 app = Flask(__name__); app.debug = True
@@ -152,16 +153,27 @@ def turnright():
         GLOBALS.ROBOT.rotate_power_degrees_IMU(30, 90)
     return jsonify(data)
 
-@app.route('/mission', methods=['GET','POST']) # allows the current mission to be updated, and previous missions viewed
+@app.route('/mission', methods=['GET','POST']) # Allows the current mission to be updated, and previous missions to be viewed
 def misson():
     data = None
-    # if method is 
-        # get form data
-        # insert this data into the mission entry
-        # select the entry id and save it into the session
+    if request.method == "POST": # If the POST method is being used
+        userid = session['userid'] # Get the userid from the session
+        notes = request.form.get('notes') # Get the notes from the form
+        location = request.form.get('location') # Get the location from the form
+        starttimePartOne = datetime.now() # Get the start time through a datetime function to get the current time
+        starttime = time.mktime(datetime.datetime.strptime(starttimePartOne, "%Y/%m/%d %H:%M:%S").timetuple()) 
+        # This above bit makes the start time from part one into a Unix Timestamp
+        log("FLASK_APP - mission: " + str(location) + " " + str(notes) + " " + str(starttime)) # Log these things
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO missionsTable (userid, name, starttime, location, notes) VALUES (?,?,?,?,?)", (userid, session[name], starttime, location, notes))
+        # I might have mucked up this query, too bad!
+        # I haven't done one of these in a while. So it's a bit of a guessing game as to whether it works or not.
+
+
+        # The next step: select the current mission entry id and save it into the session as session['missionid']
+        # The next next step: Get the mission history and send it to the page
     return render_template('mission.html', data=data)
 
-@app.route('/sensorview', methods=['GET','POST']) # allows the sensor outputs to be viewed
+@app.route('/sensorview', methods=['GET','POST']) # Allows the sensor outputs to be viewed
 def sensorview():
     data = None
 
