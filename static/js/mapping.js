@@ -28,5 +28,14 @@ function drawmap() {
    }
 }
 
-load_map();
-drawmap();
+function mapforward(results) //This is called when the forward button is pressed
+{
+   console.log(results);
+   //results.heading;
+   turtle.lookTo(results.heading);
+   turtle.forward(results.elapsedtime*20);
+
+}
+
+load_map(); // This loads the map and links in Javascript Turtle
+// drawmap();

@@ -122,7 +122,8 @@ def reloadpackage():
 def moveforward():
     data = {}
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.move_power_time(30, 3)
+        dat['elapsedtime'] = GLOBALS.ROBOT.move_power(30)
+        data['heading'] = GLOBALS.ROBOT.get_compass_IMU()
     return jsonify(data)
 
 @app.route('/movebackward', methods=['GET','POST'])
@@ -176,6 +177,10 @@ def misson():
 @app.route('/sensorview', methods=['GET','POST']) # Allows the sensor outputs to be viewed
 def sensorview():
     data = None
+    if GLOBALS.ROBOT:
+        data = GLOBALS.ROBOT.get_all_sensors()
+    else:
+        return redirect('/dashboard')
 
     return render_template('sensorsview.html', data=data)
 

@@ -3,27 +3,50 @@
     <div class="page-header" id="banner">
         <div class="row">
             <h1>Robot Sensor View</h1>
+            {{data}}
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Sensor Name</th>
+                    <th scope="col">Sensor</th>
                     <th scope="col">Sensor Value</th>
                   </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <th scope="row">Temperature</th>
+                        <td id="temperature">{{data['temperature']}}</td>
+                    </tr>
                   <tr>
-                    <th scope="row">Sensor Name</th>
-                    <td>Value</td>
+                    <th scope="row">Battery</th>
+                    <td id="battery">{{data['battery']}}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Sensor Value</th>
-                    <td>Value</td>
+                    <th scope="row">Ultrasonic</th>
+                    <td id="ultrasonic">{{data['ultrasonic']}}</td>
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+                    <th scope="row">Thermal</th>
+                    <td id="thermal">{{data['thermal']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Orientation</th>
+                    <td id="orientation">{{data['orientation']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Acceleration</th>
+                    <td id="acceleration">{{data['acceleration']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Colour</th>
+                    <td id="colour">{{data['colour']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Compass</th>
+                    <td id="compass">{{data['compass']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gyro</th>
+                    <td id="gyro">{{data['gyro']}}</td>
                   </tr>
                 </tbody>
               </table>
