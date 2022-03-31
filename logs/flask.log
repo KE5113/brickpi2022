@@ -25,3 +25,9 @@ INFO:flask_app:FLASK APP: LOADING THE ROBOT
 INFO:werkzeug:127.0.0.1 - - [09/Mar/2022 13:55:21] "[35m[1mPOST /robotload HTTP/1.1[0m" 500 -
 INFO:werkzeug: * Detected change in '/Users/kieraneades/Documents/GitHub/brickpi2022/flask_app.py', reloading
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.41.79:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 235-704-380
