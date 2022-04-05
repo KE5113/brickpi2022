@@ -106,8 +106,8 @@ def shoot():
     if GLOBALS.SOUND:
         GLOBALS.SOUND.say("Prepare to die")
     if GLOBALS.ROBOT:
-        for i in range(2): # Because this is playing up otherwise.
-            GLOBALS.ROBOT.spin_medium_motor(360)
+        #for i in range(2): # Because this is playing up otherwise.
+        GLOBALS.ROBOT.spin_medium_motor(360)
     return jsonify(data)
 
 @app.route('/reloadpackage', methods=['GET','POST'])
@@ -116,8 +116,8 @@ def reloadpackage():
     if GLOBALS.SOUND:
         GLOBALS.SOUND.say("Loading new package")
     if GLOBALS.ROBOT:
-        for i in range(2): # Because this is playing up otherwise.
-            GLOBALS.ROBOT.spin_medium_motor(-360)
+        #for i in range(2): # Because this is playing up otherwise.
+        GLOBALS.ROBOT.spin_medium_motor(-360)
     return jsonify(data)
 
 @app.route('/moveforward', methods=['GET','POST'])
