@@ -3,6 +3,7 @@ from interfaces import databaseinterface, camerainterface, soundinterface
 import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import logging, time
+from datetime import *
 
 #Creates the Flask Server Object
 app = Flask(__name__); app.debug = True
@@ -99,15 +100,89 @@ def sensors():
 
 # YOUR FLASK CODE------------------------------------------------------------------------
 
-@app.route('/sensorview', methods=['GET','POST'])
+@app.route('/shoot', methods=['GET','POST'])
+def shoot():
+    data = {}
+    if GLOBALS.SOUND:
+        GLOBALS.SOUND.say("Prepare to die")
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.spin_medium_motor(360)
+    return jsonify(data)
+
+@app.route('/reloadpackage', methods=['GET','POST'])
+def reloadpackage():
+    data = {}
+    if GLOBALS.SOUND:
+        GLOBALS.SOUND.say("Loading new package")
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.spin_medium_motor(-360)
+    return jsonify(data)
+
+@app.route('/moveforward', methods=['GET','POST'])
+def moveforward():
+    data = {}
+    if GLOBALS.ROBOT:
+        dat['elapsedtime'] = GLOBALS.ROBOT.move_power(30)
+        data['heading'] = GLOBALS.ROBOT.get_compass_IMU()
+    return jsonify(data)
+
+@app.route('/movebackward', methods=['GET','POST'])
+def movebackward():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.move_power_time(-30, 3)
+    return jsonify(data)
+
+@app.route('/stop', methods=['GET','POST'])
+def stop():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.stop_all()
+    return jsonify(data)
+
+@app.route('/turnleft', methods=['GET','POST'])
+def turnleft():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.rotate_power_degrees_IMU(30, -90)
+    return jsonify(data)
+
+@app.route('/turnright', methods=['GET','POST'])
+def turnright():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.rotate_power_degrees_IMU(30, 90)
+    return jsonify(data)
+
+@app.route('/mission', methods=['GET','POST']) # Allows the current mission to be updated, and previous missions to be viewed
+def misson():
+    data = None
+    if request.method == "POST": # If the POST method is being used
+        userid = session['userid'] # Get the userid from the session
+        notes = request.form.get('notes') # Get the notes from the form
+        location = request.form.get('location') # Get the location from the form
+        starttimePartOne = datetime.now() # Get the start time through a datetime function to get the current time
+        starttime = time.mktime(datetime.datetime.strptime(starttimePartOne, "%Y/%m/%d %H:%M:%S").timetuple()) 
+        # This above bit makes the start time from part one into a Unix Timestamp
+        log("FLASK_APP - mission: " + str(location) + " " + str(notes) + " " + str(starttime)) # Log these things
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO missionsTable (userid, name, starttime, location, notes) VALUES (?,?,?,?,?)", (userid, session[name], starttime, location, notes))
+        # I might have mucked up this query, too bad!
+        # I haven't done one of these in a while. So it's a bit of a guessing game as to whether it works or not.
+
+
+        # The next step: select the current mission entry id and save it into the session as session['missionid']
+        # The next next step: Get the mission history and send it to the page
+    return render_template('mission.html', data=data)
+
+@app.route('/sensorview', methods=['GET','POST']) # Allows the sensor outputs to be viewed
 def sensorview():
-    return render_template("sensorview.html")
+    data = None
+    if GLOBALS.ROBOT:
+        data = GLOBALS.ROBOT.get_all_sensors()
+    else:
+        return redirect('/dashboard')
 
-@app.route('/mission', methods=['GET','POST'])
-def mission():
-    return render_template("mission.html")
-
-
+    return render_template('sensorsview.html', data=data)
 
 
 

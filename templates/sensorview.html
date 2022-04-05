@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="page-header" id="banner">
+        <div class="row">
+            <h1>Robot Sensor View</h1>
+            {{data}}
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sensor</th>
+                    <th scope="col">Sensor Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Temperature</th>
+                        <td id="temperature">{{data['temperature']}}</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Battery</th>
+                    <td id="battery">{{data['battery']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ultrasonic</th>
+                    <td id="ultrasonic">{{data['ultrasonic']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Thermal</th>
+                    <td id="thermal">{{data['thermal']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Orientation</th>
+                    <td id="orientation">{{data['orientation']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Acceleration</th>
+                    <td id="acceleration">{{data['acceleration']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Colour</th>
+                    <td id="colour">{{data['colour']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Compass</th>
+                    <td id="compass">{{data['compass']}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gyroscopic</th>
+                    <td id="gyro">{{data['gyro']}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="row" id="message">
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="/static/js/sensor.js"></script> <!-- JSON HELPER -->
+{% endblock %}
