@@ -20,12 +20,16 @@
         </div>
         <div class="row">
             <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/turnleft');">Turn Left</button>
+            <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/stop');">Stop</button>
             <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/turnright');">Turn Right</button>
-            <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/shoot');">Deploy Rescue Package</button>
-            <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/reloadpackage');">Load Rescue Package</button>
         </div>
         <div class="row">
             <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/movebackward');">Move Backward</button>
+        </div>
+        <div>
+            <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/shoot');">Deploy Rescue Package</button>
+            <button id="sensors" type="button" class="btn btn-info">Enable/Disable Autonomous Mode</button>
+            <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/reloadpackage');">Load Rescue Package</button>
         </div>
         <div class="row">
             <div id="videobox" class="col">
