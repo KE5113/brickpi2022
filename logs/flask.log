@@ -534,3 +534,33 @@ INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:25:11] "[37mPOST /reloadpackage
 INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:25:17] "[37mPOST /shoot HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:26:32] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:26:32] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:26:40] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:26:40] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:26:52] "[37mPOST /reloadpackage HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:26:53] "[37mPOST /reloadpackage HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:27:03] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:27:14] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:27:21] "[37mPOST /reloadpackage HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:27:23] "[37mPOST /reloadpackage HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:27:29] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [05/Apr/2022 21:27:50] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
