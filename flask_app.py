@@ -181,6 +181,7 @@ def misson():
     # The next next step: Get the mission history and send it to the page
     data = GLOBALS.DATABASE.ViewQuery("SELECT MissionsTable.MissionID, UsersTable.Name, MissionsTable.StartDateTime, MissionsTable.Location, MissionsTable.EndDateTime, MissionsTable.MedicalNotes FROM MissionsTable INNER JOIN UsersTable ON MissionsTable.UserID = UsersTable.UserID")
     # Hoping and praying that this will work.
+    log(data) # Stupid, but it should help in figuring out where the problem is.
 
     return render_template('mission.html', data=data) # This renders the template and includes any data that will be sent.
 
