@@ -173,8 +173,16 @@ def misson():
 
 
         # The next step: select the current mission entry id and save it into the session as session['missionid']
+        CurrentMissionID = GLOBALS.DATABASE.ViewQuery("SELECT MissionID FROM MissionsTable WHERE EndDateTime IS NULL")
+        # Like the modify query, I haven't done one of these for a while. It might be quite wrong, but let's hope not!
+        session['missionid'] = CurrentMissionID # If the query doesn't work then this will cause problems.
+
+
         # The next next step: Get the mission history and send it to the page
-    return render_template('mission.html', data=data)
+        data = GLOBALS.DATABASE.ViewQuery("SELECT MissionsTable.MissionID, UsersTable.Name, MissionsTable.StartDateTime, MissionsTable.Location, MissionsTable.EndDateTime, MissionsTable.MedicalNotes FROM MissionsTable INNER JOIN UsersTable ON MissionsTable.UserID = UsersTable.UserID")
+        # Hoping and praying that this will work.
+
+    return render_template('mission.html', data=data) # This renders the template and includes any data that will be sent.
 
 @app.route('/sensorview', methods=['GET','POST']) # Allows the sensor outputs to be viewed
 def sensorview():
