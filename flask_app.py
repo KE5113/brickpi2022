@@ -178,9 +178,9 @@ def misson():
         session['missionid'] = CurrentMissionID # If the query doesn't work then this will cause problems.
 
 
-        # The next next step: Get the mission history and send it to the page
-        data = GLOBALS.DATABASE.ViewQuery("SELECT MissionsTable.MissionID, UsersTable.Name, MissionsTable.StartDateTime, MissionsTable.Location, MissionsTable.EndDateTime, MissionsTable.MedicalNotes FROM MissionsTable INNER JOIN UsersTable ON MissionsTable.UserID = UsersTable.UserID")
-        # Hoping and praying that this will work.
+    # The next next step: Get the mission history and send it to the page
+    data = GLOBALS.DATABASE.ViewQuery("SELECT MissionsTable.MissionID, UsersTable.Name, MissionsTable.StartDateTime, MissionsTable.Location, MissionsTable.EndDateTime, MissionsTable.MedicalNotes FROM MissionsTable INNER JOIN UsersTable ON MissionsTable.UserID = UsersTable.UserID")
+    # Hoping and praying that this will work.
 
     return render_template('mission.html', data=data) # This renders the template and includes any data that will be sent.
 
