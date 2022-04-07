@@ -164,7 +164,8 @@ def misson():
         notes = request.form.get('notes') # Get the notes from the form
         location = request.form.get('location') # Get the location from the form
         starttimePartOne = datetime.now() # Get the start time through a datetime function to get the current time
-        starttime = time.mktime(datetime.datetime.strptime(starttimePartOne, "%Y/%m/%d %H:%M:%S").timetuple()) 
+        log(starttimePartOne) # Logging to see what format this is in because mktime is causing issues.
+        starttime = time.mktime(datetime.datetime.strptime(starttimePartOne, "%Y/%m/%d %H:%M:%S").timetuple())
         # This above bit makes the start time from part one into a Unix Timestamp
         log("FLASK_APP - mission: " + str(location) + " " + str(notes) + " " + str(starttime)) # Log these things
         GLOBALS.DATABASE.ModifyQuery("INSERT INTO missionsTable (userid, starttime, location, notes) VALUES (?,?,?,?)", (userid, starttime, location, notes))
