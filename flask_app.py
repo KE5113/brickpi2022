@@ -179,6 +179,8 @@ def misson():
         # Like the modify query, I haven't done one of these for a while. It might be quite wrong, but let's hope not!
         session['missionid'] = CurrentMissionID # If the query doesn't work then this will cause problems. This is supposed to
         # set the missionid in session to the current MissionID that we obtained from the DB.
+        log(session['missionid']) # Log the CurrentMissionID that is in session
+        log(CurrentMissionID) # Log this just for comparison.
 
 
     # The next next step: Get the mission history and send it to the page

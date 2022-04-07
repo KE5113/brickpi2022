@@ -920,3 +920,61 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 449-678-323
 INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:03] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:03] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:07] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:07] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:07] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:07] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:07] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:07] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:16] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:16] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:flask_app:[{'StartDateTime': 1744239514, 'MedicalNotes': 'There were 7 victims that were known to be present at the mission start. At the end, 3 harmed, 2 unharmed and 2 critically injured victims were found and provided aid.', 'Name': 'John', 'MissionID': 1, 'EndDateTime': 1744240374, 'Location': '123 Fake Street'}, {'StartDateTime': 1816328172, 'MedicalNotes': 'There were 12 victims known to be present at mission start.', 'Name': 'John', 'MissionID': 2, 'EndDateTime': None, 'Location': '83 Place Drive'}]
+INFO:werkzeug:192.168.0.99 - - [07/Apr/2022 10:16:23] "[37mGET /mission HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
