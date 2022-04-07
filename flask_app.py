@@ -167,21 +167,30 @@ def misson():
         starttime = time.mktime(datetime.datetime.strptime(starttimePartOne, "%Y/%m/%d %H:%M:%S").timetuple()) 
         # This above bit makes the start time from part one into a Unix Timestamp
         log("FLASK_APP - mission: " + str(location) + " " + str(notes) + " " + str(starttime)) # Log these things
-        GLOBALS.DATABASE.ModifyQuery("INSERT INTO missionsTable (userid, name, starttime, location, notes) VALUES (?,?,?,?,?)", (userid, session[name], starttime, location, notes))
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO missionsTable (userid, starttime, location, notes) VALUES (?,?,?,?)", (userid, starttime, location, notes))
         # I might have mucked up this query, too bad!
         # I haven't done one of these in a while. So it's a bit of a guessing game as to whether it works or not.
+        # Note to self: Yes, I mucked up the query. I realise that there is no name field in MissionsTable, and that
+        # subsequently, I'm a bit silly.
 
 
         # The next step: select the current mission entry id and save it into the session as session['missionid']
         CurrentMissionID = GLOBALS.DATABASE.ViewQuery("SELECT MissionID FROM MissionsTable WHERE EndDateTime IS NULL")
         # Like the modify query, I haven't done one of these for a while. It might be quite wrong, but let's hope not!
-        session['missionid'] = CurrentMissionID # If the query doesn't work then this will cause problems.
+        session['missionid'] = CurrentMissionID # If the query doesn't work then this will cause problems. This is supposed to
+        # set the missionid in session to the current MissionID that we obtained from the DB.
 
 
     # The next next step: Get the mission history and send it to the page
     data = GLOBALS.DATABASE.ViewQuery("SELECT MissionsTable.MissionID, UsersTable.Name, MissionsTable.StartDateTime, MissionsTable.Location, MissionsTable.EndDateTime, MissionsTable.MedicalNotes FROM MissionsTable INNER JOIN UsersTable ON MissionsTable.UserID = UsersTable.UserID")
     # Hoping and praying that this will work.
     log(data) # Stupid, but it should help in figuring out where the problem is.
+
+    #TODO: Right, time to do some serious witchcraft. I'm going to remove the need to state the name of the manager on the 
+    # mission.html form, as we can get that via the UserID in the session dictionary. As for the current mission selection, 
+    # my best guess is to add some things to the DB manually and then run it again, because right now it returns 'False'.
+
+    #TODO: Time to run these changes and report what happens
 
     return render_template('mission.html', data=data) # This renders the template and includes any data that will be sent.
 
