@@ -1174,3 +1174,24 @@ INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/bri
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 19:21:21] "[37mGET / HTTP/1.1[0m" 200 -
+ERROR:flask_app:DATABASE ERROR: no such table: users
+ERROR:flask_app:SELECT * FROM users WHERE email = ?
+INFO:flask_app:False
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 19:21:35] "[37mPOST / HTTP/1.1[0m" 200 -
+ERROR:flask_app:DATABASE ERROR: no such table: users
+ERROR:flask_app:SELECT * FROM users WHERE email = ?
+INFO:flask_app:False
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 19:22:10] "[37mPOST / HTTP/1.1[0m" 200 -
+ERROR:flask_app:DATABASE ERROR: no such table: users
+ERROR:flask_app:SELECT * FROM users WHERE email = ?
+INFO:flask_app:False
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 19:22:22] "[37mPOST / HTTP/1.1[0m" 200 -
