@@ -35,9 +35,9 @@ def login():
                 session['name'] = user['name']
                 return redirect('/dashboard')
             else:
-                message = "Login Unsuccessful"
+                message = "Login Unsuccessful" + " " + str(user['password']) # THIS IS ONLY TO TEST THINGS - REMOVE IT WHEN DONE PLEASE!
         else:
-            message = "Login Unsuccessful"
+            message = "Login Unsuccessful" + " " + str(userdetails)
     return render_template('login.html', data = message)    
 
 # Load the ROBOT
