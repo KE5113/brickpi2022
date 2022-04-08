@@ -1097,3 +1097,42 @@ INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py',
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:14] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:14] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:16] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:16] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:17] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:17] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:17] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:31] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:47:32] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:48:00] "[35m[1mGET /sensorview HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:48:03] "[37mGET /sensorview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:48:03] "[37mGET /sensorview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:48:03] "[37mGET /sensorview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:48:03] "[37mGET /sensorview?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:48:03] "[37mGET /sensorview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 10:48:03] "[37mGET /sensorview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323

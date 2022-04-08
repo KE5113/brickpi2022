@@ -206,7 +206,7 @@ def sensorview():
     else:
         return redirect('/dashboard')
 
-    return render_template('sensorsview.html', data=data)
+    return render_template('sensorview.html', data=data)
 
 
 
