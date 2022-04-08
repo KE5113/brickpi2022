@@ -29,7 +29,7 @@ def login():
         log(userdetails)
         if userdetails:
             user = userdetails[0] #get first row in results
-            if user['password'] == request.form.get("password"):
+            if user['Password'] == request.form.get("password"):
                 session['userid'] = user['userid']
                 session['permission'] = user['permission']
                 session['name'] = user['name']
