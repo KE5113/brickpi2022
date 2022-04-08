@@ -30,9 +30,9 @@ def login():
         if userdetails:
             user = userdetails[0] #get first row in results
             if user['Password'] == request.form.get("password"):
-                session['UserID'] = user['userid']
-                session['Permission'] = user['permission']
-                session['Name'] = user['name']
+                session['userid'] = user['UserID']
+                session['permission'] = user['Permission']
+                session['name'] = user['Name']
                 return redirect('/dashboard')
             else:
                 message = "Login Unsuccessful" + " " + str(user['password']) # THIS IS ONLY TO TEST THINGS - REMOVE IT WHEN DONE PLEASE!
