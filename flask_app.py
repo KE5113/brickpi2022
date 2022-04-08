@@ -167,6 +167,7 @@ def misson():
         log(starttimePartOne) # Logging to see what format this is in because mktime is causing issues.
         starttime = time.mktime(datetime.datetime.strptime(starttimePartOne, "%Y-%m-%d %H:%M:%S").timetuple()) # Please work for the love of goodness gracious.
         # This above bit makes the start time from part one into a Unix Timestamp
+        #TODO: For some unholy and godforsaken reason, the terminal says that time.mktime
         log("FLASK_APP - mission: " + str(location) + " " + str(notes) + " " + str(starttime)) # Log these things
         GLOBALS.DATABASE.ModifyQuery("INSERT INTO missionsTable (userid, starttime, location, notes) VALUES (?,?,?,?)", (userid, starttime, location, notes))
         # I might have mucked up this query, too bad!
