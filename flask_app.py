@@ -25,7 +25,7 @@ def login():
     message = ""
     if request.method == "POST":
         email = request.form.get("email")
-        userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
+        userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM UsersTable WHERE Email = ?", (email,))
         log(userdetails)
         if userdetails:
             user = userdetails[0] #get first row in results
