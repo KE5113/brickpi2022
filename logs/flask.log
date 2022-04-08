@@ -1136,3 +1136,26 @@ INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py',
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 449-678-323
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 449-678-323
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:38:19] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:38:34] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:38:34] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:38:51] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:38:51] "[37mGET /static/js/sensor.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:38:58] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:39:02] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:39:09] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:40:26] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:40:42] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:40:51] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:40:59] "[37mGET /sensorview HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.179 - - [08/Apr/2022 18:41:35] "[37mGET /sensorview HTTP/1.1[0m" 200 -
